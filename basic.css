@@ -1,0 +1,37 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+ 
+img {
+    max-width: 100%;
+}
+
+:root {
+    /* fonts */
+
+    /* font family */
+    --pff: 'Inter', sans-serif;
+    --sff: 'Karla', sans-serif;
+
+    /* font-size */
+    --sfs: 16px;
+    --mfs: 20px;
+    --lfs: 40px;
+
+/* font weight */
+    --sfw: 400;
+    --mfw: 500;
+    --lfw: 800;
+
+
+    /* colours */
+    --aclr: #ff0000;
+    --bgclr: #ffe100;
+}
