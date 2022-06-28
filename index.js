@@ -9,7 +9,7 @@ let passwordLength = 12
 
     function generate() {
         firstBtn.style.opacity = "1"
-        secondBtn.style.opacity = "1"
+        secondBtn.style.opacity = "1 "
         passwordOne = ""
         passwordTwo = ""
 
