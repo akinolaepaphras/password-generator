@@ -4,6 +4,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let firstBtn = document.getElementById("footer__first-btn")
 let secondBtn = document.getElementById("footer__second-btn")
+let modal = document.querySelector(".modal")
 let passwordLength = 12
 
 
@@ -23,3 +24,18 @@ firstBtn.textContent = passwordOne
 secondBtn.textContent = passwordTwo
     }
 
+    firstBtn.addEventListener("click", ()=> {
+        navigator.clipboard.writeText(firstBtn.textContent)
+        modal.classList.add("active") 
+ setTimeout(()=> {
+    modal.classList.remove("active")
+ }, 1700)
+    })
+
+    secondBtn.addEventListener("click", ()=> {
+        navigator.clipboard.writeText(secondBtn.textContent)
+        modal.classList.add("active") 
+ setTimeout(()=> {
+    modal.classList.remove("active")
+ }, 1700)
+    })

@@ -1,10 +1,13 @@
 body {
   background-color: var(--bgclr);
+
 }
 
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  position: relative;
+
 }
 
 header {
@@ -35,32 +38,36 @@ header {
   font-weight: var(--mfw);
   background-color: var(--aclr);
   color: var(--bgclr);
+  width: 15rem;
   outline: none;
   border: none;
   border-radius: 10px;
   padding: 1em 1em;
   margin-bottom: 4em;
   cursor: pointer;
+  transition: color 200ms ease-in-out;
 }
 
 #btn:hover {
-  opacity: 60%;
+ background-color: black;
 }
 
 #footer__first-btn,
 #footer__second-btn {
+ width: 15rem;
   font-family: var(-pff);
   font-size: var(--mfs);
   font-weight: var(--sfw);
-  color: #bcbdc0;
+  color: whitesmoke ;
   background-color: black;
   border: none;
   outline: none;
   border-radius: 10px;
-  padding: 1em 1.2em;
+  padding: 1rem 1.2rem;
   text-align: center;
   cursor: pointer;
   opacity: 0;
+  transition: transform 200ms ease-in-out;
 }
 
 
@@ -71,12 +78,51 @@ header {
 
 #footer__first-btn:hover,
 #footer__second-btn:hover {
-  opacity: 60%;
+transform: scale(1.1);
 }
 
-@media (max-width: 600px) {
+.modal {
+  display: none;
+  margin-top: 6.5rem;
+  width: 13rem;
+  background-color: #2a9d8f;
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  opacity: 0.5;
+
+}
+
+.modal.active {
+  display: block;
+  opacity: 1;
+  animation: bounceInUp;
+  animation-duration: 1s;
+
+}
+
+.modal-text {
+  font-family: var(--pff);
+  color: white;
+  text-align: center;
+
+}
+
+@media (max-width: 700px) {
   #footer__first-btn,
   #footer__second-btn {
     margin-bottom: 1.5em;
   }
+
+  .modal {
+    margin: 0;
+    position: absolute;
+    left: 2.2rem;
+   bottom: 0.2rem;
+  width: 12rem;
+  font-size: 1rem;
+  padding: 0.1em;
+  }
 }
+
